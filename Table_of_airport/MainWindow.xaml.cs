@@ -171,6 +171,65 @@ namespace Table_of_airport
             return true;
         }
 
+        public class aircraft
+        {
+            // Номер рейса
+            public string number_flight;
+            // Тип самолёта
+            public string type_of_aircraft;
+            // Город вылета
+            public string departure_city;
+            // Аэропорт вылета
+            public string departure_airport;
+            // Город прилёта
+            public string arrival_city;
+            // Аэропорт прилёта
+            public string arrival_airport;
+            // Время отправления
+            public string departure_time;
+            // Время прибытия
+            public string arrival_time;
+
+            // Конструктор
+            public aircraft()
+            {
+
+            }
+
+            // Импорт данных
+            public void import_data()
+            {
+                // Открываем фаил с данными
+                // Путь к фаилу с данными рейсов
+                string path = @"C:\Users\Vladislav\C# WPF projects\Table_of_airport\Table_of_airport\input.txt";
+                string result;
+
+                using (StreamReader reader = new StreamReader(path))
+                {
+                    // Чтение строки из StreamReader 
+                    result = reader.ReadToEnd();
+                }
+
+                //
+                char[] arr;
+                arr = result.ToCharArray();
+                // Пропускаем структурную строку фаила и начинаем работать с данными
+                for(int i=0; ; i++)
+                {
+                    int cout_delimber = 0;
+                    if (arr[i]=="|")
+                    {
+
+                    }
+                }
+            }
+
+            // Деструктор
+            ~aircraft()
+            {
+
+            }
+        }
 
         // Функция запускается как только мы переключаемся на вкладку
         private void Table_of_air(object sender, RoutedEventArgs e)
@@ -183,6 +242,10 @@ namespace Table_of_airport
 
 
             air_flight.Text = "Генерация данных.Генерация данных.Генерация данных.Генерация данных.Генерация данных.Генерация данных.Генерация данных.Генерация данных.Генерация данных.Генерация данных.Генерация данных.";
+            Console.WriteLine("Начинаю читать фаилы");
+            aircraft air = new aircraft();
+            air.import_data();
+            Console.WriteLine("3-4 закончили упражнение");
         }
 
         private void Timer_Tick(object sender, EventArgs e)
