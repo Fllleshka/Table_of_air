@@ -202,26 +202,28 @@ namespace Table_of_airport
                 // Открываем фаил с данными
                 // Путь к фаилу с данными рейсов
                 string path = @"C:\Users\Vladislav\C# WPF projects\Table_of_airport\Table_of_airport\input.txt";
+                // Переменная в которую мы запишем данные из фаила
                 string result;
 
+                // Чтение строки
                 using (StreamReader reader = new StreamReader(path))
                 {
-                    // Чтение строки из StreamReader 
                     result = reader.ReadToEnd();
                 }
 
-                //
-                char[] arr;
-                arr = result.ToCharArray();
-                // Пропускаем структурную строку фаила и начинаем работать с данными
-                for(int i=0; ; i++)
-                {
-                    int cout_delimber = 0;
-                    if (arr[i]=="|")
-                    {
+                // Преобразуем строку в массив
+                char[] array = result.ToCharArray();
 
+                // Пробегаемся по массиву
+                for(int i = 0; i<array.Length; i++)
+                {
+                    // Пропускаем первую строку
+                    if(i == 120)
+                    {
+                        // Формируем первый элемент нашей базы данных
                     }
                 }
+                Console.WriteLine(array);
             }
 
             // Деструктор
@@ -252,7 +254,7 @@ namespace Table_of_airport
         {
             // Время сейчас
             DateTime nowTime = DateTime.Now;
-            Console.WriteLine(nowTime.ToString("HH:mm:ss"));
+            //Console.WriteLine(nowTime.ToString("HH:mm:ss"));
             clock.Text = nowTime.ToString("HH:mm:ss");
         }
     }
