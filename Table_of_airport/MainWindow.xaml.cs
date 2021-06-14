@@ -71,7 +71,7 @@ namespace Table_of_airport
                 MessageBox.Show("Запись не выполнена");
 
             // Вывод данных в richtextbox
-            string str_way_to_file = @"..\..\input2.txt";
+            string str_way_to_file = @"..\..\input.txt";
 
             System.IO.StreamReader objReader = new StreamReader(str_way_to_file);
             if (File.Exists(str_way_to_file))
@@ -90,7 +90,7 @@ namespace Table_of_airport
         private Boolean write_text_to_file(int N)
         {
             // Путь к фаилу в который будет генерироваться расписание рейсов
-            string path = @"..\..\input2.txt";
+            string path = @"..\..\input.txt";
             // Описание структуры фаила
             string struct_file = "Номер_рейса|Тип_самолёта|Город_вылета|Аэропорт_вылета|Город_прилёта|Аэропорт_прилёта|Время_отправления|Время_прибытия|";
 
@@ -200,53 +200,29 @@ namespace Table_of_airport
             {
                 // Открываем фаил с данными
                 // Путь к фаилу с данными рейсов
-                string path = @"C:\Users\Vladislav\C# WPF projects\Table_of_airport\Table_of_airport\input.txt";
+                string path = @"..\..\input.txt";
                 // Переменная в которую мы запишем данные из фаила
                 string result;
-
-                string H = "3";
-                int H2 = 3;
-                Console.Write("========");
-                Console.Write(H);
-                Console.Write("========");
-                Console.Write(H2);
-                Console.Write("========");
-
                 // Чтение строки
                 using (StreamReader reader = new StreamReader(path))
                 {
                     result = reader.ReadToEnd();
                 }
 
-                string str = result.Substring(120);
-                for (int i = 0; i < 120; i++) { 
-                Console.Write(str[i]);
-                }
+                // Выводим строку 
+                /*Console.Write("==============\n");
+                Console.Write(result);
+                Console.Write("==============\n");*/
 
-                /*String[] pairs = { "Color1=red", "Color2=green", "Color3=blue",
-                 "Title=Code Repository" };
-                foreach (var pair in pairs)
+                // Оброезаем ненужную часть строки
+                string result2 = result.Substring(120);
+                result = result2;
+                // Разделяем строку на нужные нам части
+                string[] subs = result.Split('\n');
+                foreach (var sub in subs)
                 {
-                    int position = pair.IndexOf("=");
-                    if (position < 0)
-                        continue;
-                    Console.WriteLine("Key: {0}, Value: '{1}'",
-                                   pair.Substring(0, position),
-                                   pair.Substring(position + 1));
-                }*/
-                /* Преобразуем строку в массив
-                char[] array = result.ToCharArray();
-                string str;
-                // Пробегаемся по массиву
-                for(int i = 0; i<array.Length; i++)
-                {
-                    // Пропускаем первую строку
-                    if(i == 120)
-                    {
-                        // Формируем первый элемент нашей базы данных
-                        number_flight = str
-                    }
-                }*/
+                    Console.WriteLine(sub);
+                }
             }
 
             // Деструктор
