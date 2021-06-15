@@ -17,7 +17,7 @@
             <Setter Property="Background" Value="#FFFFFF" />
             <Setter Property="TextAlignment" Value="Right" />
         </Style>
-        
+
         <Style TargetType="TextBlock" x:Key="Clock">
             <Setter Property="Background" Value="#FFFF00" />
             <Setter Property="FontSize" Value="50" />
@@ -88,6 +88,58 @@
                         <TextBlock Name="air_flight" Style="{StaticResource Air_flight}"></TextBlock>
                     </StatusBarItem>
                     <TextBlock Name="clock" Style="{StaticResource Clock}" Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="3" ></TextBlock>
+                    <GroupBox Grid.ColumnSpan="9" Header="" HorizontalAlignment="Left" Height="45" Margin="10,42,0,0" Grid.Row="4" VerticalAlignment="Top" Width="760">
+                        <RichTextBox IsReadOnly="True" Height="23" VerticalAlignment="Top" Margin="0,0,664,0">
+                            <FlowDocument>
+                                <Paragraph>
+                                    <Run Text="RichTextBox"/>
+                                </Paragraph>
+                            </FlowDocument>
+                        </RichTextBox>
+                    </GroupBox>
+                    <Label Content="Номер рейса" HorizontalAlignment="Center" Margin="10,0,0,94" Grid.Row="4" VerticalAlignment="Center" Width="90" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" Height="37"/>
+                    <Label Content="Город назначения" HorizontalAlignment="Center" Margin="0,0,0,94" Grid.Row="4" VerticalAlignment="Center" Width="170" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" Grid.Column="2" Height="37"/>
+                    <Label Content="Время" HorizontalAlignment="Center" Margin="0,0,0,89" Grid.Row="4" VerticalAlignment="Center" Width="93" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" Grid.Column="3" RenderTransformOrigin="0.053,0.423" Height="42"/>
+                    <Label Content="Время" HorizontalAlignment="Center" Margin="0,0,0,89" Grid.Row="4" VerticalAlignment="Center" Width="93" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" Grid.Column="5" RenderTransformOrigin="0.053,0.423" Height="42"/>
+                    <Label Content="отправления" HorizontalAlignment="Center" Margin="0,16,0,80" Grid.Row="4" VerticalAlignment="Center" Width="93" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" Grid.Column="3" RenderTransformOrigin="0.053,0.423" Height="35"/>
+                    <Label Content="прибытия" HorizontalAlignment="Center" Margin="0,16,0,80" Grid.Row="4" VerticalAlignment="Center" Width="93" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" Grid.Column="5" RenderTransformOrigin="0.053,0.423" Height="35"/>
+                    <Label Content="Примечание" HorizontalAlignment="Center" Margin="0,0,0,82" Grid.Row="4" VerticalAlignment="Center" Width="170" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" Grid.Column="6" Height="49"/>
+                    <Label Content="Номер выхода" HorizontalAlignment="Center" Margin="5,0,20,82" Grid.Row="4" VerticalAlignment="Center" Width="95" FlowDirection="RightToLeft" HorizontalContentAlignment="Center" Grid.Column="7" Grid.ColumnSpan="2" Height="49"/>
+                    <RichTextBox IsReadOnly="True" Height="23" VerticalAlignment="Top" Margin="0,58,0,0" Grid.Column="2" Grid.Row="4">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="RichTextBox"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <RichTextBox IsReadOnly="True" Height="23" VerticalAlignment="Top" Margin="0,58,0,0" Grid.Column="3" Grid.Row="4">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="RichTextBox"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <RichTextBox IsReadOnly="True" Height="23" VerticalAlignment="Top" Margin="0,58,0,0" Grid.Column="5" Grid.Row="4">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="RichTextBox"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <RichTextBox IsReadOnly="True" Height="23" VerticalAlignment="Top" Margin="0,58,0,0" Grid.Column="6" Grid.Row="4">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="RichTextBox"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <RichTextBox IsReadOnly="True" Height="23" VerticalAlignment="Top" Margin="10,58,23,0" Grid.Column="7" Grid.Row="4" Grid.ColumnSpan="2">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="RichTextBox"/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
                 </Grid>
             </TabItem>
         </TabControl>

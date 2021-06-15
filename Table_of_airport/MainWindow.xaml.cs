@@ -217,12 +217,6 @@ namespace Table_of_airport
                 // Оброезаем ненужную часть строки
                 string result2 = result.Substring(120);
                 result = result2;
-                // Разделяем строку на нужные нам части
-                string[] subs = result.Split('\n');
-                foreach (var sub in subs)
-                {
-                    Console.WriteLine(sub);
-                }
             }
 
             // Деструктор
