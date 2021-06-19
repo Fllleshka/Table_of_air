@@ -209,14 +209,34 @@ namespace Table_of_airport
                     result = reader.ReadToEnd();
                 }
 
-                // Выводим строку 
-                /*Console.Write("==============\n");
-                Console.Write(result);
-                Console.Write("==============\n");*/
-
                 // Оброезаем ненужную часть строки
                 string result2 = result.Substring(120);
                 result = result2;
+
+                string[] dates = result.Split('|');
+                int i = 0;
+
+                // Выводим строку 
+                Console.Write("=======result=======\n");
+                Console.Write(result);
+                Console.Write("=======dates=======\n");
+                foreach (var sub in dates)
+                {
+                    if (i < 8)
+                    {
+                        Console.WriteLine($"Substring: {sub}");
+                        i++;
+                    }
+                    else
+                    {
+                        i = 0;
+                        Console.WriteLine($"Substring: {sub}");
+                        Console.WriteLine("I обнулилось! А значит строка закончилась! \n");
+                    }
+                }
+                Console.Write("==============\n");
+
+
             }
 
             // Деструктор
